@@ -1,0 +1,94 @@
+
+.outer {
+  background: #d6d6d6;
+  height: auto;
+  width: auto;
+  position: relative;
+  border-radius: 5%;
+  padding: 10px;
+  
+}
+
+#menu-btn{
+  background: white;
+  border: none;
+}
+
+#select{
+  background: blue;
+}
+#image{
+  display: block;
+  height: 200px;
+  width: 200px;
+  position: relative;
+  float:right;
+  border-radius: 0% 3% 3% 0%;
+}
+.screen{
+    width: inherit;
+  padding: 3px;
+  background: white;
+  height: 200px;
+  border-radius: 3%;
+}
+
+.content{
+  position: absolute;
+  background: white;
+  height: 200px;
+  width: 130px;
+  border-radius: 3%;
+  font-family: calibri;
+  box-shadow: 3px 0px 8px;
+}
+
+#topnav{
+  background: #D3D3D3;
+  border-radius: 3%; 
+}
+
+.opt{
+  padding: 3px;
+}
+
+.controlouter{
+  height: 180px;
+  width: 180px;
+  background: white;
+  border-radius: 50%;
+  margin: 33px;
+  font-family: calibri;
+}
+
+#menu{
+  position: absolute;
+    margin-left: 70px;
+}
+
+#previous{
+  position:absolute;
+  margin-top: 77px;
+  margin-left: 17px;
+}
+
+#play{
+  position:absolute;
+  margin-top: 145px;
+  margin-left:80px;
+}
+
+#next{
+   position:absolute;
+  margin-top: 77px;
+  margin-left: 145px;
+}
+
+.controlinner{
+  position : absolute;
+   height: 80px;
+  width: 80px;
+  background: #d6d6d6;
+  border-radius: 50%;
+  margin: 49px;
+ }

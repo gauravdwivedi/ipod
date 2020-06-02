@@ -1,0 +1,20 @@
+.screen{
+    width: 240px;
+    height: 200px;
+    text-align: left;
+    background-color: white;
+}
+
+.screen ul li{
+    list-style: none;
+    line-height: 0.4in;
+}
+
+.heading{
+    margin-bottom: 0;
+}
+
+.selected{
+    background-color: blue;
+    color: white;
+}
