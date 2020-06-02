@@ -20,7 +20,7 @@ class Ipod extends React.Component{
         }
     }
       
-    
+    //Tracking Wheel rotation
     wheelRotate=(props)=>{
         let angle =0;
         const target =document.getElementById('outerwheel');
@@ -50,6 +50,7 @@ class Ipod extends React.Component{
                 Playlists.style.backgroundColor="white";
                 Playlists.style.color="black";
 
+                //trace the wheel
                 this.setState({
                     Menu:true,
                     album:false,
@@ -157,7 +158,7 @@ class Ipod extends React.Component{
 
 
     enterItem= (props)=>{
-       
+       //click on menu item
 
         if(this.state.songs===true && this.state.Menu===true ){
             
@@ -167,7 +168,7 @@ class Ipod extends React.Component{
 
             // console.log(this.state.Menu);
 
-            let screen =document.getElementById('mainScreen');
+           let screen =document.getElementById('mainScreen');
            let list=document.getElementById('list');
            list.style.visibility="hidden";
            list.style.display="none";
@@ -199,7 +200,6 @@ class Ipod extends React.Component{
            h1.style.height="100%";
            h1.style.width="100%";
            screen.appendChild(h1);
-
         }
 
 
@@ -249,7 +249,7 @@ class Ipod extends React.Component{
     }
 
 
-    //when clicked on Menu btn to get black to menu
+    // Menu btn to get black to menu
     itemCLick=(props)=>{
         console.log(this.state.Menu);
 
@@ -264,6 +264,8 @@ class Ipod extends React.Component{
             let MenuItems =document.getElementById('list');
             MenuItems.style.display="block"
             MenuItems.style.visibility="visible";
+
+            //reset the state to initial state
             this.setState({
             Menu:true,
             album:false,
