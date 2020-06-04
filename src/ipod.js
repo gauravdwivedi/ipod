@@ -3,6 +3,8 @@ import './ipod.css';
 import Screen from './screen';
 import Wheel from './wheel';
 import ZingTouch from 'zingtouch';
+import './images/playlist.jpg';
+
 
 
 class Ipod extends React.Component{
@@ -161,21 +163,20 @@ class Ipod extends React.Component{
        //click on menu item
 
         if(this.state.songs===true && this.state.Menu===true ){
-            
            this.setState({Menu:false},()=>{
                console.log(this.state.Menu);
            })
 
             // console.log(this.state.Menu);
-
            let screen =document.getElementById('mainScreen');
            let list=document.getElementById('list');
            list.style.visibility="hidden";
            list.style.display="none";
 
-           let h1 =document.createElement('h1');
+           let h1 =document.createElement('img');
            h1.id="h1-screen";
-           h1.textContent="Songs";
+           //h1.textContent="Songs";
+            h1.setAttribute("src",require('./images/player.jpg'));
            h1.style.height="100%";
            h1.style.width="100%";
 
@@ -194,15 +195,15 @@ class Ipod extends React.Component{
             list.style.visibility="hidden";
             list.style.display="none";
 
-           let h1 =document.createElement('h1');
+           let h1 =document.createElement('img');
            h1.id="h1-screen";
-           h1.textContent="Artist";
+           //h1.textContent="Artist";
+           h1.setAttribute("src",require('./images/artist.jpg'));
            h1.style.height="100%";
            h1.style.width="100%";
+           h1.style.margin="auto";
            screen.appendChild(h1);
         }
-
-
         
         if(this.state.album===true && this.state.Menu===true){
             
@@ -217,7 +218,9 @@ class Ipod extends React.Component{
 
            let h1 =document.createElement('h1');
            h1.id="h1-screen";
-           h1.textContent="Album";
+           //h1.textContent="Album";
+           
+           h1.setAttribute("src",require('./images/album.png'));
            h1.style.height="100%";
            h1.style.width="100%";
            screen.appendChild(h1);
@@ -231,14 +234,17 @@ class Ipod extends React.Component{
                 console.log(this.state.Menu);
             })
             
+
             let screen =document.getElementById('mainScreen');
-           let list=document.getElementById('list');
+            let list=document.getElementById('list');
             list.style.visibility="hidden";
             list.style.display="none";
 
            let h1 =document.createElement('h1');
            h1.id="h1-screen";
-           h1.textContent="PlayList";
+           //h1.textContent="PlayList";
+           
+           h1.setAttribute("src","playlist.jpg");
            h1.style.height="100%";
            h1.style.width="100%";
            screen.appendChild(h1);
@@ -249,18 +255,22 @@ class Ipod extends React.Component{
     }
 
 
+    setImage=(props)=>{
+
+        console.log("Inside Set Image ");
+    }
+
     // Menu btn to get black to menu
     itemCLick=(props)=>{
         console.log(this.state.Menu);
 
        if(this.state.Menu===false){
 
-       // console.log(this.state.Menu);
-   
-            let prev =document.getElementById('h1-screen');
-            console.log(prev);
-            prev.remove();
+                //console.log(this.state.Menu);
 
+            let prev =document.getElementById('h1-screen');
+                //console.log(prev);
+            prev.remove();
             let MenuItems =document.getElementById('list');
             MenuItems.style.display="block"
             MenuItems.style.visibility="visible";
